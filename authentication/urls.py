@@ -22,5 +22,6 @@ urlpatterns = [
     path('signup', views.signup, name="signup"),
     path('signin', views.signin, name="signin"),
     path('signout', views.signout, name="signout"),
+    path('css/index.css', views.signout, name="index.css"),
 
 ]
