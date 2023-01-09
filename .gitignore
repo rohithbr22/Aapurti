@@ -1,0 +1,4 @@
+#Ignore pyvenv file : this is ENV Specific
+
+pyvenv
+*.bak
