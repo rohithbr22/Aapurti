@@ -54,8 +54,8 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" data-toggle="modal" data-target="#loginModal">Login</button>
-        <button type="button" onclick="window.location.href ='/signup'" class="btn btn-primary">Sign Up</button>
+        <button type="button" class="btn btn-outline-primary me-2" data-toggle="modal" data-target="#loginModal">Vendor Login</button>
+        <button type="button" onclick="window.location.href ='https://accenture.wd3.myworkdayjobs.com/AccentureCareers/login?'" class="btn btn-primary">Login</button>
       </div>
     </header>
   </div>
@@ -71,18 +71,19 @@
       </div>
       <div class="modal-body">
         <div class="form-title text-center">
-          <h4>Login</h4>
+          <h4>Vendor Login</h4>
         </div>
         <div class="d-flex flex-column text-center">
           <form action="/signin" method="post">
             {% csrf_token %}
             <div class="form-group">
-              <input type="text" class="form-control" id="username" name="username" placeholder="Your email address..." required>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
             </div>
             <div class="form-group">
               <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Your password..." required>
             </div>
             <button type="submit" class="btn btn-info btn-block btn-round">Login</button>
+
             {% for message in messages %}
             <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                 <strong>Message:</strong> {{ message }}
@@ -108,7 +109,7 @@
       </div>
     </div>
       <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+        <div class="signup-section">Not a member yet? <a href="/signup" class="text-info"> Sign Up</a>.</div>
       </div>
   </div>
 </div>
@@ -140,5 +141,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
         <script src="{% static 'topper.js' %}"></script>
         <script  src="{% static 'LoginForm.js' %}"></script>
-    </body>
+
+      </body>
 </html>
